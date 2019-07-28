@@ -22,9 +22,16 @@ Output =>
 [49, 20, 500]
 
 */
-
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function MultiByNum1OrNum2(array,number1,number2) {
+  var result=array.map(function(value,index,array){
+   if(value%number1===0){
+     return value*number1
+   }
+   else{
+     return value*number2;
+   }
+  })
+    return result;     
 }
 
 /* Q2:
@@ -57,9 +64,13 @@ Output =>
   { name: "mercer",age:26}
 ]
 */
-
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function longerAndYounger(arr,number1,number2) {
+     var result= arr.filter(function(value,index,array){
+       (array[index].length<=number1 && array[index]<number2)
+         return value
+       
+     }) 
+     return result   
 }
 
 /* Q3:
@@ -89,8 +100,13 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameAndAllFoods(arr,number) {
+  var result=arr.reduce(function(total,currentvalue,currentindex,array){
+      if(currentvalue===number){
+        total=total+array[index]
+      }
+  },"")
+  return result      
 }
 
 
